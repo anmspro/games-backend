@@ -12,6 +12,7 @@ class Player extends Model
     protected $fillable = [
         'name',
         'score',
+        'total_score',
         'top_score',
         'life'
     ];

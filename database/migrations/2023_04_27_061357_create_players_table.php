@@ -17,6 +17,7 @@ class CreatePlayersTable extends Migration
             $table->id();
             $table->string('name');
             $table->integer('score')->default(0);
+            $table->integer('total_score')->default(0);
             $table->integer('top_score')->default(0);
             $table->integer('life')->default(5);
             $table->timestamps();
