@@ -19,3 +19,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('/players', \App\Http\Controllers\PlayerController::class);
+
+// Route::group(['middleware' => ['cors', 'json.response']], function () {
+
+//     // public routes
+//     Route::post('/login', '\App\Http\Controllers\AuthController@login')->name('login.api');
+//     Route::post('/register', '\App\Http\Controllers\AuthController@register')->name('register.api');
+// });
+
+// Route::middleware('auth:api')->group(function () {
+//     // our routes to be protected will go in here
+//     Route::post('/logout', '\App\Http\Controllers\AuthController@logout')->name('logout.api');
+// });

@@ -40,10 +40,9 @@ class PlayerController extends Controller
     {
         $player = Player::create($request->all());
 
-        if($player) {
+        if ($player) {
             return \response()->json("success");
-        }
-        else {
+        } else {
             return \response()->json("failed");
         }
     }
@@ -58,10 +57,9 @@ class PlayerController extends Controller
     {
         $player = Player::find($player->id);
 
-        if($player) {
+        if ($player) {
             return \response()->json($player);
-        }
-        else {
+        } else {
             return \response()->json("failed");
         }
     }
@@ -89,10 +87,9 @@ class PlayerController extends Controller
         $player = Player::find($player->id);
         $player->update($request->all());
 
-        if($player) {
+        if ($player) {
             return \response()->json($player);
-        }
-        else {
+        } else {
             return \response()->json("failed");
         }
     }
@@ -108,10 +105,9 @@ class PlayerController extends Controller
         $player = Player::find($player->id);
         $player->delete();
 
-        if($player) {
+        if ($player) {
             return \response()->json("success");
-        }
-        else {
+        } else {
             return \response()->json("failed");
         }
     }
